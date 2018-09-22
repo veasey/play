@@ -1,0 +1,36 @@
+<html>
+
+	<head>
+		<title>PlayList</title>
+	</head>
+
+	<style>
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		ul li:hover {
+			cursor: pointer;
+			background: lightgray;
+		}
+	</style>
+
+	<body>
+	    <div id='tracks'>
+
+				<ul id='listing'></ul>
+
+				<audio id="player" controls>
+					<source src="track1.mp3" type="audio/mpeg">
+						Your browser does not support the audio element.
+				</audio>
+
+			</div>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="play.js"></script>
+
+</html>
