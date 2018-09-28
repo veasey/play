@@ -12,9 +12,14 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/xenial32"
 
   config.vm.network :forwarded_port, guest: 80, host: 8080
+
+  #config.vm.boot_timeout = 600
+  #config.vm.provider :virtualbox do |vb|
+  #  vb.gui = true
+  #end
 
   Vagrant.configure("2") do |config|
     config.vm.provision "shell", path: "bootstrap.sh"
