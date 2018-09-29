@@ -7,12 +7,6 @@ function init() {
   addClickEvent();
 }
 
-function displayTracks(tracks) {
-  $.each(tracks, function(number, filename ) {
-      $('#listing').append('<li>' + filename + '</li>');
-  });
-}
-
 function getTracks() {
   $.ajax({
     url: "findAudioFiles.php",
@@ -20,6 +14,12 @@ function getTracks() {
     async: false,
   }).done(function(data) {
     displayTracks(data);
+  });
+}
+
+function displayTracks(tracks) {
+  $.each(tracks, function(number, filename ) {
+      $('#listing').append('<li>' + filename + '</li>');
   });
 }
 

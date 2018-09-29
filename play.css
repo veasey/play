@@ -1,0 +1,19 @@
+#tracks {
+  max-width: 320px;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0.5em;
+}
+
+ul li:nth-child(even) {
+  background: lightgray;
+}
+
+ul li:hover {
+  cursor: pointer;
+  background: black;
+  color: white;
+}
