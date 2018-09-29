@@ -3,6 +3,7 @@
 # bootstrap file for vagrant machine
 ###
 
+# php
 sudo apt-get -y install php
 
 # nginx
@@ -16,7 +17,7 @@ sudo ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/site.co
 sudo service nginx restart
 
 # clean /var/www
-sudo rm -Rf /var/www
+sudo rm -Rf /var/www/html
 
 # symlink /var/www => /vagrant
-sudo ln -s /vagrant /var/www
+sudo ln -s /vagrant /var/www/html
